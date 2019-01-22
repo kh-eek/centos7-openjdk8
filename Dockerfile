@@ -19,6 +19,6 @@ ENV JAVA_HOME /etc/alternatives/jre
 RUN groupadd -r tomcat -g 1000 \
 && useradd -u 1000 -r -g tomcat -m -d /opt/tomcat -s /sbin/nologin tomcat \
 && chmod 755 /opt/tomcat \
-&& usermod -g root -G `id -g tomcat` tomcat \
+&& usermod -g root -G  'id -g tomcat' tomcat
 
 USER tomcat
