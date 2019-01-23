@@ -17,7 +17,7 @@ steps:
   displayName: 'docker build'
 
 steps:
-- displayName: 'docker push'
-  script: |
+- script: |
     docker login -u $(dockerId) -p $(dockerPassword)
     docker push $(imageName)
+  displayName: 'docker push'
